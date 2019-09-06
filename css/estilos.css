@@ -65,6 +65,7 @@ figure {
 	justify-content: space-between;
 	align-items: center;
 	height: 70px;
+	flex-wrap: wrap;
 }
 
 .header a {
@@ -98,6 +99,7 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .portfolio {
@@ -114,6 +116,7 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .project-course,
@@ -193,6 +196,7 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .form-email h3 {
@@ -255,6 +259,7 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .footer img {
@@ -266,7 +271,8 @@ figure {
 }
 
 .container{
-	width: 1300px;
+	max-width: 1000px;
+	flex: 1;
 	margin: 0 auto;
 	display: inherit;
 	justify-content: inherit;
@@ -294,18 +300,37 @@ figure {
 
 /* Desktop firts desde MQ maxima */
 
-@media screen and(max-width: 1024px){
+@media screen and (max-width: 1024px) {
 
 }
 
-@media screen and(max-width: 768px){
+@media screen and (max-width: 767px) {
+	.header {
+		display: block;
+		height: auto;
+	}
+
+	.header ul {
+		display: initial;
+	}
+
+	.header ul li {
+		height: 50px;
+	}
+
+	.header a {
+		justify-content: center;
+	}
+
+	.header .logo{
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 480px) {
 	
 }
 
-@media screen and(max-width: 480px){
-	
-}
-
-@media screen and(max-width: 320px){
+@media screen and (max-width: 320px) {
 	
 }
