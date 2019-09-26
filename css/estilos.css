@@ -140,11 +140,15 @@ figure {
 }
 
 .project-details {
-	width: 500px;
+	width: 50%;
 }
 
 .project-imageContainer {
-	width: 500px;
+	width: 50%;
+}
+
+.project-imageContainer img {
+	max-width: 100%;
 }
 
 .event-list {
@@ -154,11 +158,11 @@ figure {
 }
 
 .event {
-	width: 480px;
-	margin: 10px;
+	width: 48%;
+	margin: 1%;
 	border-radius: 10px;
 	overflow: hidden;
-	flex-shrink: 0;
+	flex-shrink: 1;
 	background: #f4fbff;
 }
 
@@ -270,7 +274,7 @@ figure {
 	color: #ffa;
 }
 
-.container{
+.container {
 	max-width: 1000px;
 	flex: 1;
 	margin: 0 auto;
@@ -301,10 +305,26 @@ figure {
 /* Desktop firts desde MQ maxima */
 
 @media screen and (max-width: 1024px) {
-
+	.container {
+		padding	: 0 1em;
+	}
+	
 }
-
+/* 1px mas abajo del ipad */
 @media screen and (max-width: 767px) {
+
+	.hero {
+		height: auto;
+	}
+
+	.hero img {
+		position: absolute;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+	
 	.header {
 		display: block;
 		height: auto;
@@ -322,13 +342,92 @@ figure {
 		justify-content: center;
 	}
 
-	.header .logo{
+	.header .logo {
 		text-align: center;
+	}
+
+	.project {
+		display: block;
+	}
+
+	.project-course,
+	.project-date,
+	.project-url {
+		margin: .3em 0;
+	}
+
+	.project-details {
+		width: auto;
+		font-size: 16px;
+	}
+
+	.project-title {
+		font-size: 1.5em;
+		margin-bottom: .3em;
+	}
+
+	.project-url {
+		font-size: 1em;
+	}
+
+	.project-course {
+		font-size: .7em;
+	}
+
+	.project-date {
+		font-size: 1em;
+	}
+
+	.project-description {
+		font-size: .8em;
+	}
+
+	.project-imageContainer {
+		width: auto;
+		text-align: center;
+	}
+
+	.event {
+		width: auto;
+		flex-shrink: initial;
+	}
+
+	.event img {
+		width: 100%;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	
+	.project-details {
+		font-size: 12px;
+	}
+
+	.event-details {
+		margin: -2em .5em .5em;
+		padding: 1em;
+	}
+
+	.contact {
+		height: auto;
+		padding: 1.5em 0;
+		text-align: center;
+		display: block;
+	}
+
+	.form-email button{
+		margin: 1em auto;
+	}
+
+	.form-email h3 {
+		margin-top: 0;
+	}
+
+	.footer {
+		display: block;
+		text-align: center;
+		padding: 1px;
+		border: 1px solid transparent;
+	}
 }
 
 @media screen and (max-width: 320px) {
